@@ -9,30 +9,30 @@ def test_product_serializer_minimal():
 
 
 
-    # Cria os dados do produto (sem passar category)
     data = {
         "title": "Produto Teste",
         "description": "Descrição teste",
         "price": 100,
+        "categories_id": [category.id]
     }
 
-    # Cria serializer e valida
+    
     serializer = ProductSerializer(data=data)
     assert serializer.is_valid(), f"Erros: {serializer.errors}"
 
-    # Salva o produto
+    
     product = serializer.save()
 
-    # Associa categoria existente ao produto
+    
     product.category.add(category)
 
-    # Verifica campos básicos do produto
+    
     assert product.title == data["title"]
     assert product.description == data["description"]
     assert product.price == data["price"]
 
 
-    # Serializa o produto e confere os dados
+    
     serializer = ProductSerializer(product)
     serializer_data = serializer.data
 

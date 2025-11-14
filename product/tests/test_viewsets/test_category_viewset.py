@@ -21,7 +21,7 @@ class CategoryViewSet(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         category_data = json.loads(response.content)["results"]
 
-        self.assertEqual(category_data[0]["title"], self.category.title)
+        self.assertEqual(category_data["results"][0]["title"], self.category.title)
 
         print(category_data)
 
@@ -39,4 +39,3 @@ class CategoryViewSet(APITestCase):
         created_category = Category.objects.get(title="technology")
 
         self.assertEqual(created_category.title, "technology")
-
