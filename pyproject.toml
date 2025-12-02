@@ -3,26 +3,26 @@ name = "bookstore"
 version = "0.1.0"
 description = "Bookstore API"
 authors = [
-    {name = "PedroAntoniodev",email = "pedrinhox333@gmail.com"}
+    {name = "PedroAntoniodev", email = "pedrinhox333@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
+
 dependencies = [
-    "django (>=5.2.7,<6.0.0)",
-    "djangorestframework (>=3.16.1,<4.0.0)",
-    "django-extensions (>=4.1,<5.0)",
-    "django-debug-toolbar (>=6.1.0,<7.0.0)",
-    "psycopg2-binary (>=2.9.11,<3.0.0)",
-    "flake8 (>=7.3.0,<8.0.0)"
+    "django>=5.2.7,<6.0.0",
+    "djangorestframework>=3.16.1,<4.0.0",
+    "django-extensions>=4.1,<5.0",
+    "django-debug-toolbar>=6.1.0,<7.0.0",
+    "psycopg2-binary>=2.9.11,<3.0.0",
+    "flake8>=7.3.0,<8.0.0",
+    "gitpython (>=3.1.45,<4.0.0)"
 ]
 
-[dependency-groups]
-dev = [
-    "pytest (>=8.4.2,<9.0.0)",
-    "factory-boy (>=3.3.3,<4.0.0)",
-    "django-debug-toolbar (>=6.1.0,<7.0.0)",
-    "pytest-django (>=4.11.1,<5.0.0)"
-]
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.4.2,<9.0.0"
+pytest-django = ">=4.11.1,<5.0.0"
+factory-boy = ">=3.3.3,<4.0.0"
+Faker = ">=37.8.0,<38.0.0"
 
 
 [build-system]
