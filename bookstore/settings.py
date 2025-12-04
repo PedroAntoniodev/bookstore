@@ -159,6 +159,5 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "ebac-bookstore-api.herokuapp.com",
     "pedroantoniodev.pythonanywhere.com"
 ]
