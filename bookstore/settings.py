@@ -160,5 +160,5 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "ebac-bookstore-api.herokuapp.com",
-    "pedroAntonioDev.pythonanywhere.com"
+    "pedroantoniodev.pythonanywhere.com"
 ]
